@@ -34,11 +34,7 @@ const elementListReducer = (state = [], action) => {
         default:
             return state;
     }
-};    
-
-// function* firstSaga(action) {
-//     console.log('firstSaga has been hit - action: ', action);
-// }
+};
 
 function* getElements() {
     try {
@@ -63,7 +59,6 @@ function* postElement(action) {
 
 // this is the saga that will watch for actions
 function* watcherSaga() {
-    // yield takeEvery('SET_ELEMENTS', firstSaga);
     yield takeEvery('GET_ELEMENTS', getElements);
     yield takeEvery('POST_ELEMENT', postElement);
 }
