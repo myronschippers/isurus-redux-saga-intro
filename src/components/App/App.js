@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   handleClick = () => {
-    this.props.dispatch({ type: 'PUT_ELEMENT', payload: this.state });
+    this.props.dispatch({ type: 'POST_ELEMENT', payload: this.state });
 
     this.setState({
         newElement: '',

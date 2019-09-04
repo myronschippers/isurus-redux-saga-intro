@@ -36,9 +36,9 @@ const elementListReducer = (state = [], action) => {
     }
 };    
 
-function* firstSaga(action) {
-    console.log('firstSaga has been hit - action: ', action);
-}
+// function* firstSaga(action) {
+//     console.log('firstSaga has been hit - action: ', action);
+// }
 
 function* getElements() {
     try {
@@ -51,7 +51,7 @@ function* getElements() {
     }
 }
 
-function* putElement(action) {
+function* postElement(action) {
     try {
         yield axios.post('/api/element', action.payload);
         yield put({ type: 'GET_ELEMENTS' });
@@ -63,9 +63,9 @@ function* putElement(action) {
 
 // this is the saga that will watch for actions
 function* watcherSaga() {
-    yield takeEvery('SET_ELEMENTS', firstSaga);
+    // yield takeEvery('SET_ELEMENTS', firstSaga);
     yield takeEvery('GET_ELEMENTS', getElements);
-    yield takeEvery('PUT_ELEMENT', putElement);
+    yield takeEvery('POST_ELEMENT', postElement);
 }
 
 
