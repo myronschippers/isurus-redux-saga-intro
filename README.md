@@ -1,7 +1,7 @@
-# redux-saga-starter
+# Redux Saga Intro
 `npm install`
 
-This is the starting repo to accompany 06-03b_redux-saga-intro.md
+This is the lesson repo to accompany the Redux Saga Lecture.
 
 This is a 3/4 stack app (no DB)
 `npm run client` and `npm run server`
